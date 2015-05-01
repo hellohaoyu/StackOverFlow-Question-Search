@@ -1,0 +1,85 @@
+.col-xs-4 img {
+	display: inline-block;
+    vertical-align: middle;
+	
+}
+
+.itemMargin {
+	margin: 5px 0;
+}
+
+.itemMargin:hover {
+	margin: 0 0 100px 0 ;
+}
+
+
+
+.coinContainner {
+	text-align: center;
+
+	/*Draw the circle*/
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    padding: 20px 10px 0px 0px;
+    margin: 0 25px;
+
+	/*Background color*/
+    background-image: -moz-radial-gradient(blue,rgb(0, 119, 255),rgb(0, 100, 255),rgb(0, 216, 255),blue);
+	background-image: -webkit-gradient(radial, center center, 0, center center, 220, color-stop(0.20,blue),color-stop(0.40,rgb(0, 119, 255)), color-stop(0.6,rgb(0, 100, 255)), color-stop(0.8,rgb(0, 216, 255)), color-stop(1,blue)); /* old */
+	background-image: -webkit-radial-gradient(blue,rgb(0, 119, 255),rgb(0, 100, 255),rgb(0, 216, 255),blue); /* new syntax */
+	background-image: radial-gradient(blue,rgb(0, 119, 255),rgb(0, 100, 255),rgb(0, 216, 255),blue);
+}
+
+body {
+	/*background-image: url("../img/background.png");*/
+/*	background-image: url("../img/header.jpg");*/
+	
+  /*  background-color: red;*/
+}
+
+header {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+h1 {
+	color: white;
+	text-align: center;
+}
+/*#header {
+	background-image: url("img/background.jpg");
+	padding: 100px;
+}*/
+
+#headwords {
+	font-family: 'Romanesco', cursive ;
+	font-size: 100px;
+	padding: 50px 0 0 0;
+	text-align: center;
+	color: white;
+
+}
+
+.timer{
+	/*margin: 0px 30px 0 0;*/
+}
+
+.btn {
+	margin: 0 2em;
+}
+
+#clockface {
+	margin-bottom: 2em;
+
+}
