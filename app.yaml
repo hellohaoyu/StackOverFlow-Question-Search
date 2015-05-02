@@ -13,7 +13,7 @@ handlers:
   script: main.app
   secure: always
 
-- url: /Search
+- url: /search
   script: main.app
   secure: always
 
