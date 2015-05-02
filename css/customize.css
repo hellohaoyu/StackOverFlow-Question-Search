@@ -12,12 +12,15 @@
 .tooltip.right .tooltip-inner {
     background-color:white;
     color: black;
+
+    height: 250px;
+    overflow: auto;
   }
 
 .tooltip-inner {
-    max-width: 350px;
+    /*max-width: 400px;*/
     /* If max-width does not work, try using width instead */
-    width: 350px; 
+    width: 400px; 
 }
 
 .itemMargin {
