@@ -9,8 +9,6 @@ function Answer() {
     this.questionId = '0';
     this.answerId = '0';
     this.answerBody = 'None';
-    this.answerNumber = 0;
-    this.score  = "0";
 }
 
 Answer.prototype.setQuestionId = function(questionId) {
@@ -18,9 +16,8 @@ Answer.prototype.setQuestionId = function(questionId) {
 };
 
 function setAnswerBody(data) {
-    if (typeof(data.items) !== "undefined" && (data.items.length >0) ) {
+    if (typeof(data.items) !== "undefined") {
         answer.answerBody = data.items[0].body;
-        answer.answerNumber = data.items.length;
     }
 }
 
@@ -51,8 +48,6 @@ function getAnswerId(questionId, setAnswerId) {
     var jsonfile = $.getJSON("http://api.stackexchange.com/2.2/questions/" + questionId + "/answers?order=desc&sort=votes&site=stackoverflow", function(data) {
         if (typeof(data.items) !== "undefined") {
             answer.answerId = data.items[0].answer_id;
-            answer.score = data.items[0].score;
-            $("#" + questionId).html($("#" + questionId).html() + "Votes: " + answer.score); 
             getAnswerBody(questionId, answer.answerId, setAnswerBody);
         }
     });
@@ -106,23 +101,20 @@ $(function() {
                 var question = '<a  href="' + questionLink + '" class="list-group-item  itemMargin" data-toggle="tooltip" data-placement="right" data-html="true" id="' + tooltipId + '"><h4 class="list-group-item-heading" id="list-group-item-heading" style="text-align: left;">' + title + "</h4>]";
                 $(question).appendTo("#titlelist");
                 showAnswerBody(tooltipId);
-                $('#' + tooltipId).hover(function (){
-                    $(this).toggleClass('active');
-            });
+            };
 
-          }
+
+            console.log(questions);
         });
 
-    });
+        // }
 
+    });
+    function getTooltip(){
+        $("#titlelist").children().each().hover(function() {
+                    $(this).toggleClass("active");
+                });
+    };
 
 
 });
-
-
-
-
-
-
-
-
