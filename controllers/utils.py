@@ -16,7 +16,9 @@ def getSearchURL(query):
 	logging.info(query)
 	# tag = re.sub(r"\s+",'+',tag)
 	# queryURL = "http://localhost:8983/solr/test/select?q=Title%3A+"+query+"+OR+Tags%3A+"+tag+"+&wt=json&indent=true&row=100"
-	queryURL = "http://localhost:8983/solr/test/select?q=Title%3A+"+query+"&fl=Id%2C+Title%2C+Tags&wt=json&indent=true&row=10"
+	# queryURL = "http://localhost:8983/solr/test/select?q=Title%3A+"+query+"&fl=Id%2C+Title%2C+Tags&wt=json&indent=true&row=10"
+	queryURL = "http://ec2-52-7-48-130.compute-1.amazonaws.com:8983/solr/test/select?q=Title%3A+"+query+"&fl=Id%2C+Title%2C+Tags&wt=json&indent=true&row=10"
+
 	logging.info(queryURL)
 	return queryURL
 	

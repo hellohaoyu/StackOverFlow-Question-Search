@@ -48,11 +48,11 @@ function getAnswerBody(questionId, answerId, setAnswerBody) {
 
 
 function getAnswerId(questionId, setAnswerId) {
-    var jsonfile = $.getJSON("http://api.stackexchange.com/2.2/questions/" + questionId + "/answers?order=desc&sort=votes&site=stackoverflow", function(data) {
+    var jsonfile = $.getJSON("https://api.stackexchange.com/2.2/questions/" + questionId + "/answers?order=desc&sort=votes&site=stackoverflow", function(data) {
         if (typeof(data.items) !== "undefined") {
             answer.answerId = data.items[0].answer_id;
             answer.score = data.items[0].score;
-            $("#" + questionId).html($("#" + questionId).html() + "Votes: " + answer.score); 
+            $("#" + questionId).html($("#" + questionId).html() + "The most upvoted Answer: " + answer.score); 
             getAnswerBody(questionId, answer.answerId, setAnswerBody);
         }
     });
